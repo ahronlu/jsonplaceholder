@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Container } from "semantic-ui-react";
+import HomePage from "./pages/HomePage";
+import UserDetailsPage from "./pages/UserDetailsPage";
+import PostDetailsPage from "./pages/PostDetailsPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container fluid style={{ padding: 20 }}>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/user/:userId" component={UserDetailsPage} />
+          <Route path="/user/:userId/:postId" component={PostDetailsPage} />
+        </Switch>
+      </Container>
+    </Router>
   );
 }
 
