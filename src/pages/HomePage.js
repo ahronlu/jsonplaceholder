@@ -1,16 +1,8 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Card, Loader, Message } from "semantic-ui-react";
-import { getUsers } from "../actions/userListActions";
 import User from "../components/User";
 
 const HomePage = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getUsers());
-  }, [dispatch]);
-
   const { users, loading, error } = useSelector((state) => state.userList);
 
   return (

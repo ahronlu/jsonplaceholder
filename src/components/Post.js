@@ -18,7 +18,7 @@ const Post = ({ post, userId }) => {
     <Segment key={post.id} loading={loading}>
       <Icon link name="trash" onClick={handleDelete} />
       {post.title}
-      <Link to={`/user/${userId}/${post.id}`} style={{ float: "right" }}>
+      <Link to={`/user/${userId}/${post.id}`} className="floatright">
         <Icon name="chevron right" />
       </Link>
     </Segment>

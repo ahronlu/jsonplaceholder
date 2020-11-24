@@ -27,3 +27,11 @@ code {
 .pointer {
   cursor: pointer;
 }
+
+.cards {
+  padding-top: 20px;
+}
+
+.floatright {
+  float: right;
+}

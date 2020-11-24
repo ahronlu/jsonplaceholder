@@ -16,7 +16,7 @@ const UserDetailsPage = ({ match }) => {
   const { users } = useSelector((state) => state.userList);
 
   useEffect(() => {
-    setUser(users.find((user) => user.id.toString() === userId));
+    users && setUser(users.find((user) => user.id.toString() === userId));
   }, [users, userId]);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ const UserDetailsPage = ({ match }) => {
             <AddPostModal userId={userId} open={open} setOpen={setOpen} />
           </div>
           {posts.map((post) => (
-            <Post key={post.id} post={post} />
+            <Post key={post.id} post={post} userId={userId} />
           ))}
         </>
       )}

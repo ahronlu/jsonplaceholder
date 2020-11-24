@@ -20,8 +20,8 @@ const PostDetailsPage = ({ match }) => {
   const { posts } = useSelector((state) => state.userDetails);
 
   useEffect(() => {
-    setUser(users.find((user) => user.id.toString() === userId));
-    setPost(posts.find((post) => post.id.toString() === postId));
+    users && setUser(users.find((user) => user.id.toString() === userId));
+    posts && setPost(posts.find((post) => post.id.toString() === postId));
   }, [users, posts, postId, userId]);
 
   useEffect(() => {
