@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { Segment, Loader, Icon } from "semantic-ui-react";
-import { getComments, deleteComment } from "../actions/postDetailsActions";
+import { getComments } from "../actions/postDetailsActions";
 import AddCommentModal from "../components/AddCommentModal";
 import Comments from "../components/Comments";
 
