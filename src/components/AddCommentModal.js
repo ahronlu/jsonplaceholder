@@ -57,6 +57,7 @@ const AddCommentModal = ({ open, setOpen, postId }) => {
                 value={email}
                 placeholder="Enter Email"
                 onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </Form.Field>
             <Form.Field>
